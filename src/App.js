@@ -1,18 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import RaceResults from './components/RaceResults';
-import SingleResult from './components/SingleResult'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import RaceResults from "./components/RaceResults";
+import SingleResult from "./components/SingleResult"; 
 
 function App() {
   return (
-    <div className="App">
-      <RaceResults />
-      {/* <SingleResult/> */}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<RaceResults />} />
+        <Route path="/single_result" element={<SingleResult />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

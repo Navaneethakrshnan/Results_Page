@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import BannerImage from "../assets/pexels-runffwpu-2168292.jpg";
-import { Link } from "react-router-dom";;
+import { Link, useNavigate } from "react-router-dom";
 
 const RaceResults = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const navigate = useNavigate();
 
   const results = [
     {
@@ -91,7 +91,6 @@ const RaceResults = () => {
       rank: 15,
     },
   ];
-
 
   return (
     <>
@@ -194,7 +193,8 @@ const RaceResults = () => {
         <div className="container w-96 md:w-4/5 lg:w-10/12 mt-16 md:mt-10 lg:mt-20 sm:ml-28 md:ml-14 xl:ml-44 2xl:ml-24 md:mr-52 pl-8 md:pl-0">
           <div className="flex flex-wrap md:flex-col lg:flex-row md:ml-20 -m-4">
             <div className="p-5 rounded-xl w-full md:w-11/12 lg:w-96">
-              <div
+              <Link
+                to="/single_result"
                 className="flex h-46 bg-white rounded-xl p-8 py-4 flex-col"
                 style={{
                   boxShadow:
@@ -212,7 +212,7 @@ const RaceResults = () => {
                   >
                     <h2 className="text-white text-4xl font-bold">1</h2>
                   </div>
-                  <Link to="/SingleResult">
+                  <div>
                     <h2
                       className="text-gray-900 text-2xl text-start title-font font-semibold block"
                       style={{
@@ -221,14 +221,14 @@ const RaceResults = () => {
                       }}
                     >
                       SIVANATHAM
-                    </h2  >
+                    </h2>
                     <p
                       className="leading-relaxed text-gray-950 text-base mt-0 text-left"
                       style={{ fontFamily: "Nunito Sans, sans-serif" }}
                     >
                       MALE | BIB - 10234
                     </p>
-                  </Link>
+                  </div>
                 </div>
                 <div className="flex-grow text-left flex mt-3 md:px-6 lg:px-2 justify-between">
                   <div>
@@ -260,9 +260,12 @@ const RaceResults = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
-            <div className="p-5 rounded-xl w-full md:w-11/12 lg:w-96">
+            <Link
+              to="/single_result"
+              className="p-5 rounded-xl w-full md:w-11/12 lg:w-96"
+            >
               <div
                 className="flex h-46 bg-white rounded-xl p-8 py-4 flex-col"
                 style={{
@@ -330,9 +333,10 @@ const RaceResults = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
             <div className="p-5 rounded-xl w-full md:w-11/12 lg:w-96 lg:ml-48 xl:ml-52 2xl:ml-0">
-              <div
+              <Link
+                to="/single_result"
                 className="flex h-46 bg-white rounded-xl p-8 py-4 flex-col"
                 style={{
                   boxShadow:
@@ -398,7 +402,7 @@ const RaceResults = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
