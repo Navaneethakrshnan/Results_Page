@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import BannerImage from "../assets/pexels-runffwpu-2168292.jpg";
-
-const fontFamily = { fontFamily: "Nunito Sans, sans-serif" };
+import { Link } from "react-router-dom";;
 
 const RaceResults = () => {
-  const resultsPerPage = 5; // Number of results to show per page
   const [currentPage, setCurrentPage] = useState(1);
 
   const results = [
@@ -94,11 +92,6 @@ const RaceResults = () => {
     },
   ];
 
-  const indexOfLastResult = currentPage * resultsPerPage;
-  const indexOfFirstResult = indexOfLastResult - resultsPerPage;
-  const currentResults = results.slice(indexOfFirstResult, indexOfLastResult);
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <>
@@ -219,7 +212,7 @@ const RaceResults = () => {
                   >
                     <h2 className="text-white text-4xl font-bold">1</h2>
                   </div>
-                  <div>
+                  <Link to="/SingleResult">
                     <h2
                       className="text-gray-900 text-2xl text-start title-font font-semibold block"
                       style={{
@@ -228,14 +221,14 @@ const RaceResults = () => {
                       }}
                     >
                       SIVANATHAM
-                    </h2>
+                    </h2  >
                     <p
                       className="leading-relaxed text-gray-950 text-base mt-0 text-left"
                       style={{ fontFamily: "Nunito Sans, sans-serif" }}
                     >
                       MALE | BIB - 10234
                     </p>
-                  </div>
+                  </Link>
                 </div>
                 <div className="flex-grow text-left flex mt-3 md:px-6 lg:px-2 justify-between">
                   <div>
