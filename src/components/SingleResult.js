@@ -3,7 +3,6 @@ import Image from "../assets/salem_marathon_2024.jpg";
 import BackgroundImage from "../assets/bg_badge.png";
 import LogoImage from "../assets/nova_logo.png";
 import CircleImage from "../assets/Removal-162.png";
-import DownloadImage from "../assets/download_badge.png";
 import "./SingleResult.css";
 
 const SingleResult = () => {
@@ -98,35 +97,43 @@ const SingleResult = () => {
                     style={{ height: "45px" }}
                   />
                 </div>
-                <div className="flex -mt-14 justify-center items-center relative lg:-ml-6 xl:-ml-0 2xl:ml-0">
-                  <img
+                <div className="flex mt-8 mb-24 justify-center items-center relative lg:-ml-6 xl:-ml-0 2xl:ml-0">
+                  {/* <img
                     className="align-center align-middle"
                     src={CircleImage}
                     style={{ height: "320px" }}
-                  />
-                  <p className="absolute text-4xl lg:-mt-5 font-bold text-white title-font">
+                  /> */}
+                  <div className="w-32 h-32 bg-[#292662] rounded-full align-middle "></div>
+                  <p className="absolute text-4xl lg:-mt-0 font-bold text-white title-font">
                     NK
                   </p>
                 </div>
+
                 <div className="-mt-16 lg:-ml-6 xl:-ml-0 2xl:ml-0">
                   <p
-                    className="2xl:text-2xl xl:text-xl text-2xl font-extrabold uppercase text-neutral-200 title-font mb-2 "
-                    style={{ fontFamily: "Anton, sans-serif" }}
+                    className="2xl:text-4xl xl:text-xl text-2xl font-extrabold uppercase text-neutral-200 title-font mb-2 "
+                    style={{ fontFamily: "Teko, sans-serif" }}
                   >
                     Navaneetha Krishnan
                   </p>
-                  <p className="2xl:text-3xl xl:text-xl  text-2xl font-semibold uppercase text-neutral-200 title-font mb-2">
+                  <p
+                    className="2xl:text-3xl xl:text-xl  text-2xl font-semibold uppercase text-neutral-200 title-font mb-2"
+                    style={{ fontFamily: "Kanit, sans-serif" }}
+                  >
                     BIB : 1118
                   </p>
                 </div>
                 <div className="mt-10 lg:-ml-6 xl:-ml-0 2xl:ml-0">
-                  <p className="2xl:text-2xl xl:text-2xl lg:text-xl text-2xl font-semibold uppercase text-neutral-200 title-font mb-0">
+                  <p
+                    className="2xl:text-3xl xl:text-3xl lg:text-2xl text-2xl font-bold uppercase text-neutral-200 title-font mb-0"
+                    style={{ fontFamily: "Reddit Mono, monospace" }}
+                  >
                     SALEM MARATHON 2024
                   </p>
-                  <p className="2xl:text-2xl xl:text-2xl lg:text-lg text-2xl font-semibold uppercase text-neutral-200 title-font mb-2">
+                  <p className="2xl:text-2xl xl:text-2xl lg:text-lg text-2xl pt-2 font-mornal uppercase text-neutral-200 title-font mb-2" style={{fontFamily:"Josefin Sans, sans-serif"}}>
                     5km, 10km, 21km
                   </p>
-                  <p className="2xl:text-2xl xl:text-2xl lg:text-lg text-xl font-semibold uppercase text-neutral-200 title-font mb-2">
+                  <p className="2xl:text-xl xl:text-xl lg:text-lg text-xl font-semibold uppercase text-neutral-200 title-font mb-2">
                     july 14, 2024
                   </p>
                 </div>
@@ -297,7 +304,7 @@ const SingleResult = () => {
                 <div></div>
               </div>
             </div>
-            <div className="flex justify-center space-x-4 md:ml-0 -mt-7 sm:mt-10 md:mt-16 lg:-mt-16 xl:mt-4 sm:-ml-48 lg:ml-32 xl:ml-32 2xl:ml-4">
+            <div className="flex justify-center space-x-4 md:ml-0 mt-12 sm:mt-10 md:mt-16 lg:-mt-8 xl:-mt-4 sm:-ml-48 lg:ml-32 xl:ml-32 2xl:ml-4">
               <button
                 type="button"
                 data-twe-ripple-init
@@ -354,25 +361,40 @@ const SingleResult = () => {
           <div className="w-full md:w-1/2 p-2">
             <div className="2xl:w-[25rem] xl:w-[24rem] lg:w-[20rem] md:w-[23rem] sm:w-[32rem] w-[22rem] bg-[#292662] h-14 rounded-lg pt-1 pl-4 flex items-center">
               <span className="flex items-center">
+                {/* <FontAwesomeIcon icon={byPrefixAndName.fas["house"]} />{" "} */}
                 <svg
                   width="30"
                   height="30"
-                  viewBox="0 0 25 26"
-                  fill="none"
+                  viewBox="0 0 100 100"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d="M23.433 13.9322H16.4664V9.75225C16.4664 9.58428 16.3997 9.42319 16.2809 9.30442C16.1621 9.18565 16.0011 9.11893 15.8331 9.11893H8.23321C8.06524 9.11893 7.90415 9.18565 7.78538 9.30442C7.66661 9.42319 7.59988 9.58428 7.59988 9.75225V16.6396H0.633323C0.465356 16.6396 0.304267 16.7006 0.185496 16.8251C0.0667251 16.9439 0 17.105 0 17.273V24.7937C0 24.9616 0.0667251 25.1227 0.185496 25.2415C0.304267 25.3603 0.465356 25.427 0.633323 25.427H23.433C23.6009 25.427 23.762 25.3603 23.8808 25.2415C23.9996 25.1227 24.0663 24.9616 24.0663 24.7937V14.5655C24.0663 14.3975 23.9996 14.2365 23.8808 14.1177C23.762 13.9989 23.6009 13.9322 23.433 13.9322ZM1.26665 17.9063H7.59988V24.1604H1.26665V17.9063ZM8.86653 17.273V10.3856H15.1998V24.1604H8.86653V17.273ZM22.7996 24.1604H16.4664V15.1988H22.7996V24.1604Z"
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    stroke="gold"
+                    stroke-width="5"
+                    fill="goldenrod"
+                  />
+                  <polygon
+                    points="50,15 58,40 85,40 60,55 70,85 50,65 30,85 40,55 15,40 42,40"
                     fill="white"
-                  ></path>
-                  <path
-                    d="M9.89595 4.66665L9.66795 6.45896C9.65271 6.5759 9.67043 6.69478 9.7191 6.80219C9.76778 6.90961 9.84548 7.00131 9.94345 7.06695C10.0477 7.13568 10.17 7.17204 10.2949 7.17145C10.4062 7.17125 10.5154 7.14176 10.6116 7.08595L12.1759 6.17713L13.8067 6.94978C13.9136 7.00032 14.0324 7.01994 14.1499 7.00643C14.2673 6.99292 14.3786 6.94682 14.4712 6.87334C14.5638 6.79987 14.6339 6.70195 14.6738 6.59066C14.7136 6.47938 14.7215 6.35917 14.6965 6.24363L14.3165 4.47982L15.5547 3.16568C15.6365 3.0798 15.6926 2.97267 15.7165 2.85648C15.7405 2.74029 15.7313 2.61972 15.69 2.5085C15.6488 2.39727 15.5771 2.29987 15.4832 2.22739C15.3893 2.15491 15.2769 2.11026 15.1589 2.09853L13.3602 1.91486L12.4957 0.331554C12.4392 0.227328 12.3546 0.141052 12.2515 0.082541C12.1484 0.02403 12.031 -0.00436635 11.9125 0.000582751C11.7941 0.00553185 11.6794 0.0436278 11.5815 0.110536C11.4837 0.177444 11.4065 0.270478 11.3589 0.379053L10.6306 2.03203L8.8668 2.36769C8.74942 2.38769 8.64005 2.44037 8.55125 2.5197C8.46245 2.59903 8.39781 2.70178 8.36475 2.81617C8.33168 2.93056 8.33154 3.05196 8.36433 3.16643C8.39712 3.2809 8.46152 3.3838 8.55014 3.46334L9.89595 4.66665ZM11.1911 3.21634C11.2922 3.19727 11.3871 3.15386 11.4677 3.08986C11.5482 3.02585 11.612 2.94319 11.6534 2.84902L11.9986 2.06686L12.4102 2.81735C12.4606 2.90565 12.5315 2.98053 12.617 3.03564C12.7024 3.09076 12.7998 3.1245 12.9011 3.13401L13.7529 3.21951L13.1671 3.85283C13.0968 3.92745 13.0456 4.01801 13.0181 4.11674C12.9905 4.21547 12.9873 4.31942 13.0087 4.41966L13.1892 5.25564L12.4134 4.89148C12.3205 4.84763 12.2184 4.82703 12.1158 4.83144C12.0132 4.83585 11.9132 4.86515 11.8244 4.91682L11.0834 5.34431L11.1911 4.49566C11.2039 4.39402 11.1919 4.29078 11.156 4.19482C11.1202 4.09885 11.0616 4.01301 10.9853 3.94466L10.3519 3.37467L11.1911 3.21634Z"
-                    fill="white"
-                  ></path>
+                  />
+                  <text
+                    x="50"
+                    y="50"
+                    text-anchor="middle"
+                    dy=".3em"
+                    font-size="20"
+                    font-family="Arial"
+                    fill="black"
+                  >
+                    1
+                  </text>
                 </svg>
               </span>
               <span
-                className="ml-3 mt-2 text-white font-semibold"
+                className="ml-3 mt-1 text-white font-semibold"
                 style={{ fontFamily: "Roboto, sans-serif" }}
               >
                 Ranking
@@ -498,44 +520,36 @@ const SingleResult = () => {
             <div className="2xl:w-[24.5rem] xl:w-[19rem] lg:w-[16rem] md:w-[18rem] sm:w-[32rem] w-[22rem] bg-[#292662] h-14 rounded-lg pt-1 pl-4 flex items-center 2xl:-ml-16 xl:-ml-3 lg:ml-0 md:ml-36">
               <span className="flex items-center">
                 <svg
-                  width="24"
-                  height="27"
-                  viewBox="0 0 24 27"
-                  fill="none"
+                  width="23"
+                  height="23"
+                  viewBox="0 0 100 100"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d="M19.7962 7.17542C17.7826 5.16177 15.1733 3.99895 12.3655 3.82878V1.53151H14.124C14.5494 1.53151 14.8897 1.19118 14.8897 0.765756C14.8897 0.340336 14.5494 0 14.124 0H9.10399C8.67857 0 8.33824 0.340336 8.33824 0.765756C8.33824 1.19118 8.67857 1.53151 9.10399 1.53151H10.8624V3.80042C8.05462 3.97059 5.41702 5.16176 3.40336 7.14706C3.26155 7.28887 3.17647 7.4874 3.17647 7.68592C3.17647 7.88445 3.26155 8.08298 3.40336 8.22479L5.72899 10.5221C6.0126 10.8057 6.49475 10.8057 6.80672 10.5221C7.09034 10.2384 7.09034 9.7563 6.80672 9.44433L5.04832 7.68592C6.86345 6.09769 9.18908 5.24685 11.6282 5.24685C14.3225 5.24685 16.8466 6.29622 18.7468 8.19643C22.6607 12.167 22.6607 18.5767 18.7185 22.5189C16.8183 24.4191 14.2941 25.4685 11.5998 25.4685C8.90546 25.4685 6.3813 24.4191 4.48109 22.5189C2.58088 20.6187 1.53151 18.0945 1.53151 15.4002C1.53151 14.9748 1.19118 14.6345 0.765756 14.6345C0.340336 14.6345 0 14.9748 0 15.4002C0 18.4916 1.19118 21.4128 3.40336 23.5966C5.58718 25.7805 8.5084 27 11.5998 27C14.6912 27 17.6124 25.7805 19.7962 23.5966C24.3057 19.0588 24.3057 11.7132 19.7962 7.17542Z"
-                    fill="white"
-                  ></path>
-                  <path
-                    d="M18.6908 16.2794C19.192 16.2794 19.5983 15.8731 19.5983 15.3718C19.5983 14.8706 19.192 14.4643 18.6908 14.4643C18.1895 14.4643 17.7832 14.8706 17.7832 15.3718C17.7832 15.8731 18.1895 16.2794 18.6908 16.2794Z"
-                    fill="white"
-                  ></path>
-                  <path
-                    d="M16.6195 21.2994C17.1207 21.2994 17.527 20.893 17.527 20.3918C17.527 19.8906 17.1207 19.4842 16.6195 19.4842C16.1182 19.4842 15.7119 19.8906 15.7119 20.3918C15.7119 20.893 16.1182 21.2994 16.6195 21.2994Z"
-                    fill="white"
-                  ></path>
-                  <path
-                    d="M11.5999 23.3697C12.1012 23.3697 12.5075 22.9634 12.5075 22.4622C12.5075 21.9609 12.1012 21.5546 11.5999 21.5546C11.0987 21.5546 10.6924 21.9609 10.6924 22.4622C10.6924 22.9634 11.0987 23.3697 11.5999 23.3697Z"
-                    fill="white"
-                  ></path>
-                  <path
-                    d="M6.57944 21.2994C7.08067 21.2994 7.487 20.893 7.487 20.3918C7.487 19.8906 7.08067 19.4842 6.57944 19.4842C6.0782 19.4842 5.67188 19.8906 5.67188 20.3918C5.67188 20.893 6.0782 21.2994 6.57944 21.2994Z"
-                    fill="white"
-                  ></path>
-                  <path
-                    d="M4.5101 16.2794C5.01134 16.2794 5.41767 15.8731 5.41767 15.3718C5.41767 14.8706 5.01134 14.4643 4.5101 14.4643C4.00887 14.4643 3.60254 14.8706 3.60254 15.3718C3.60254 15.8731 4.00887 16.2794 4.5101 16.2794Z"
-                    fill="white"
-                  ></path>
-                  <path
-                    d="M11.5999 9.18907C12.1012 9.18907 12.5075 8.78274 12.5075 8.28151C12.5075 7.78028 12.1012 7.37395 11.5999 7.37395C11.0987 7.37395 10.6924 7.78028 10.6924 8.28151C10.6924 8.78274 11.0987 9.18907 11.5999 9.18907Z"
-                    fill="white"
-                  ></path>
-                  <path
-                    d="M10.0958 16.875C10.9183 17.6975 12.2512 17.6975 13.1021 16.875C13.7544 16.2227 13.7544 15.2868 13.1021 14.7195L12.4781 13.4433C11.7124 13.1029 10.7481 13.2447 10.1241 13.86C9.52941 14.472 9.2733 15.2868 9.52941 16.0525C9.81302 16.8741 10.6071 17.1578 10.0958 16.875Z"
-                    fill="white"
-                  ></path>
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="45"
+                    stroke="white"
+                    stroke-width="5"
+                    fill="none"
+                  />
+                  <line
+                    x1="50"
+                    y1="50"
+                    x2="50"
+                    y2="25"
+                    stroke="white"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="50"
+                    y1="50"
+                    x2="75"
+                    y2="50"
+                    stroke="white"
+                    stroke-width="3"
+                  />
+                  <circle cx="50" cy="50" r="2" fill="white" />
                 </svg>
               </span>
               <span
@@ -597,16 +611,52 @@ const SingleResult = () => {
             <div className="xl:w-[46rem] 2xl:w-[52rem] lg:w-[38rem] md:w-[43.5rem] sm:w-[32rem] w-[22rem] bg-[#292662] h-14 rounded-lg pl-4 flex items-center">
               <span className="flex items-center">
                 <svg
-                  width="23"
-                  height="23"
-                  viewBox="0 0 23 23"
-                  fill="none"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 100 100"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d="M17.558 0C17.1597 0.0180059 16.8153 0.407384 16.8336 0.805764C16.8606 1.20382 17.2413 1.55719 17.6394 1.52986H20.383L11.2016 10.7283H0.720509C0.326712 10.7466 -0.0173295 11.136 0.000676431 11.5341C0.0186823 11.9324 0.40806 12.2855 0.806441 12.2585H11.2106L20.392 21.4659H17.6391C17.241 21.4572 16.8693 21.8283 16.8693 22.2264C16.8693 22.6341 17.2407 22.9961 17.6391 22.9961H22.2299C22.6376 22.9961 22.9997 22.6341 22.9997 22.2264V17.6275C23.0087 17.2198 22.6376 16.8397 22.2209 16.8487C21.8225 16.8487 21.4605 17.2198 21.4695 17.6275V20.3798L12.5958 11.4981L21.4698 2.60764V5.36897C21.4698 5.76703 21.8319 6.13873 22.2302 6.13873C22.638 6.13873 23 5.76735 23 5.36897V0.769431C23 0.362047 22.638 0 22.2302 0H17.558Z"
-                    fill="white"
-                  ></path>
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="45"
+                    stroke="white"
+                    stroke-width="5"
+                    fill="none"
+                  />
+                  <line
+                    x1="50"
+                    y1="50"
+                    x2="50"
+                    y2="20"
+                    stroke="white"
+                    stroke-width="5"
+                  />
+                  <line
+                    x1="50"
+                    y1="50"
+                    x2="80"
+                    y2="50"
+                    stroke="white"
+                    stroke-width="3"
+                  />
+                  <line
+                    x1="50"
+                    y1="50"
+                    x2="70"
+                    y2="30"
+                    stroke="white"
+                    stroke-width="2"
+                  />
+                  <line
+                    x1="50"
+                    y1="50"
+                    x2="30"
+                    y2="70"
+                    stroke="white"
+                    stroke-width="2"
+                  />
+                  <circle cx="50" cy="50" r="2" fill="white" />
                 </svg>
               </span>
               <span
