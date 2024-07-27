@@ -5,7 +5,6 @@
 .my-div {
   height: 45rem;
 
-
   @media (min-width: 1280px) and (max-width: 1535px) {
     .my-div {
       width: 20rem;
