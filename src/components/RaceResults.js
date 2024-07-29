@@ -3,7 +3,6 @@ import BannerImage from "../assets/pexels-runffwpu-2168292.jpg";
 import { Link, useNavigate } from "react-router-dom";
 
 const RaceResults = () => {
-  const navigate = useNavigate();
 
   const results = [
     {
