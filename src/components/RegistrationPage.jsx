@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import MainMenu from "./MainMenu";
+import MobileMenu from "./MobileMenu";
+import Footer from "./Footer";
+import MainMenu2 from "./MainMenu2";
 
 const RegistrationPage = () => {
   const IndianStates = [
@@ -120,6 +124,8 @@ const RegistrationPage = () => {
 
   return (
     <div>
+      <MainMenu2 />
+      <MobileMenu />
       <form onSubmit={handleSubmit}>
         <section className="text-gray-600 mt-5 body-font overflow-hidden">
           <div className="container px-10 lg:py-24 md:py-12 sm:py-10 py-10 2xl:mx-auto">
@@ -136,39 +142,42 @@ const RegistrationPage = () => {
                   </h2>
                   <div className="flex items-center space-x-4">
                     <label
-                      htmlFor="category"
                       className="2xl:w-52 xl:w-44 lg:w-28 md:w-52 sm:w-32 w-20 text-sm lg:text-base justify-start text-start"
+                      htmlFor="category"
                     >
                       Categories<span className="text-red-500">*</span>
                     </label>
                   </div>
                   <div className="relative mt-2">
-                    <div className="absolute inset-y-0 left-0 flex items-center pl-2">
-                      <div className="w-20 h-20 ml-5 bg-[#292662] rounded-full text-xl font-semibold text-white flex items-center justify-center">
-                        1Km
-                      </div>
-                      <div className="ml-6 space-y-2">
-                        <p className="font-bold text-2xl">1Km</p>{" "}
-                        <p className="text-lg">Timed</p>{" "}
-                        <p className="text-lg">₹100</p>
-                      </div>
-                      <div className="">
-                        <div class="flex justify-end ">
+                    <label
+                      htmlFor="default-radio-1"
+                      className="block pl-10 pr-3 py-2 2xl:w-[34rem] xl:w-[28rem] lg:w-[21rem] md:w-[30rem] sm:w-56 w-[17.5rem] border border-gray-300 h-28 bg-white rounded-md shadow-sm cursor-pointer"
+                    >
+                      <div className="absolute inset-y-0 left-0 flex items-center pl-2">
+                        <div className="2xl:w-32 xl:w-36 lg:w-44 md:w-44 w-44 h-20 md:ml-5 bg-[#292662] rounded-full text-xl font-semibold text-white flex items-center justify-center">
+                          1Km
+                        </div>
+                        <div className="ml-6 space-y-2">
+                          <p className="font-bold text-2xl">1Km</p>
+                          <p className="text-lg">Timed</p>
+                          <p className="text-lg">₹100</p>
+                        </div>
+                        <div className="flex justify-center md:justify-end w-full">
                           <input
                             id="default-radio-1"
                             type="radio"
                             value=""
                             name="default-radio"
-                            class="w-5 h-5 ml-12 md:ml-60 lg:ml-24 xl:ml-52 2xl:ml-72 text-blue-600 bg-gray-100 border-gray-300dark:bg-gray-700 dark:border-gray-600"
+                            className="w-5 h-5 md:ml-28 2xl:ml-48 xl:ml-20 mr-5 text-blue-600 bg-gray-100 border-gray-300 dark:bg-gray-700 dark:border-gray-600 cursor-pointer"
                           />
                         </div>
                       </div>
-                    </div>
-                    <input
-                      id="cate"
-                      name="cate"
-                      className="block pl-10 pr-3 py-2 2xl:w-[34rem] xl:w-[28rem] lg:w-[21rem] md:w-[30rem] sm:w-56 w-[17rem] border border-gray-300 h-28 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
-                    />
+                      <input
+                        id="default-radio-1"
+                        name="default-radio"
+                        className="hidden"
+                      />
+                    </label>
                   </div>
                 </div>
                 <div className="pb-10 mb-4 pl-8 sm:pl-12 border pt-7 border-[#e2e5e9] mt-auto w-full">
@@ -187,7 +196,7 @@ const RegistrationPage = () => {
                         type="text"
                         id="firstName"
                         name="firstName"
-                        className="block px-3 py-2  2xl:w-80 xl:w-64 lg:w-52 md:w-64 sm:w-56 w-44 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
+                        className="block px-3 py-2  2xl:w-80 xl:w-64 lg:w-52 md:w-64 sm:w-56 w-48 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
                       ></input>
                     </div>
                     {errors.firstName && (
@@ -208,7 +217,7 @@ const RegistrationPage = () => {
                         type="text"
                         id="lastName"
                         name="lastName"
-                        className="block px-3 py-2 2xl:w-80 xl:w-64 lg:w-52 md:w-64 sm:w-56 w-44    border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
+                        className="block px-3 py-2 2xl:w-80 xl:w-64 lg:w-52 md:w-64 sm:w-56 w-48    border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
                       ></input>
                     </div>
                     {errors.lastName && (
@@ -218,13 +227,13 @@ const RegistrationPage = () => {
                   <div className="flex items-center mt-2 space-x-4">
                     <label
                       htmlFor="dob"
-                      className="2xl:w-52 xl:w-44 lg:w-28 md:w-52 sm:w-32 w-20   text-sm lg:text-base justify-start text-start"
+                      className="2xl:w-52 xl:w-44 lg:w-28 md:w-52 sm:w-32 w-20 text-sm lg:text-base justify-start text-start"
                     >
                       Date of Birth <span className="text-red-500">*</span>
                     </label>
                     <div className="bg-gray-100 inline-flex rounded-lg items-center hover:bg-gray-200 focus:outline-none">
                       <input
-                        className="block px-3 py-2 2xl:w-80 xl:w-64 lg:w-52 sm:w-56 md:w-64 w-44 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
+                        className="block px-3 py-2 2xl:w-80 xl:w-64 lg:w-52 sm:w-56 md:w-64 w-48 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
                         id="dateOfBirth"
                         name="dateOfBirth"
                         format="DD/MM/YYYY"
@@ -242,7 +251,7 @@ const RegistrationPage = () => {
                     </label>
                     <div className="bg-gray-100 inline-flex rounded-lg items-center hover:bg-gray-200 focus:outline-none">
                       <select
-                        className="block px-5 py-2 2xl:w-80 xl:w-64 lg:w-52  sm:w-56 md:w-64 w-44 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
+                        className="block px-5 py-2 2xl:w-80 xl:w-64 lg:w-52  sm:w-56 md:w-64 w-48 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
                         name="gender"
                         id="gender"
                       >
@@ -254,36 +263,37 @@ const RegistrationPage = () => {
                       </select>
                     </div>
                   </div>
-
                   <div className="flex items-center mt-2 space-x-4">
                     <label
                       htmlFor="bloodGroup"
-                      className="2xl:w-52 xl:w-44lg:w-28 lg:w-28 md:w-52 sm:w-32 w-20 text-sm lg:text-base justify-start text-start"
+                      className="2xl:w-52 xl:w-44 lg:w-28 md:w-52 sm:w-32 w-20   text-sm lg:text-base justify-start text-start"
                     >
-                      Blood Group <span className="text-red-500">*</span>
+                      Blood Group<span className="text-red-500">*</span>
                     </label>
-                    <select
-                      className="block px-5 py-2 2xl:w-80 xl:w-64 lg:w-52 md:w-64 sm:w-56 w-44 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
-                      id="bloodgroup"
-                      name="bloodgroup"
-                    >
-                      <option className="" value="" disabled selected>
-                        Select
-                      </option>
-                      <option value="A+">A+</option>
-                      <option value="B+">B+</option>
-                      <option value="AB+">AB+</option>
-                      <option value="O+">O+</option>
-                      <option value="A-">A-</option>
-                      <option value="B-">B-</option>
-                      <option value="AB-">AB-</option>
-                      <option value="O-">O-</option>
-                    </select>
+                    <div className="bg-gray-100 inline-flex rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+                      <select
+                        className="block px-5 py-2 2xl:w-80 xl:w-64 lg:w-52  sm:w-56 md:w-64 w-48 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
+                        id="bloodgroup"
+                        name="bloodgroup"
+                      >
+                        <option className="" value="" disabled selected>
+                          Select
+                        </option>
+                        <option value="A+">A+</option>
+                        <option value="B+">B+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="O+">O+</option>
+                        <option value="A-">A-</option>
+                        <option value="B-">B-</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O-">O-</option>
+                      </select>
+                    </div>
                   </div>
                   <div className="flex items-center mt-2 space-x-4">
                     <label
                       htmlFor="bibName"
-                      className="2xl:w-52 xl:w-44 lg:w-28 md:w-52 sm:w-32 w-20   text-sm lg:text-base justify-start text-start"
+                      className="2xl:w-52 xl:w-44 lg:w-28 md:w-52 sm:w-32 w-20 text-sm lg:text-base justify-start text-start"
                     >
                       Name On the bib <span className="text-red-500">*</span>
                     </label>
@@ -292,7 +302,7 @@ const RegistrationPage = () => {
                         type="text"
                         id="bibName"
                         name="bibName"
-                        className="block px-3 py-2 2xl:w-80 xl:w-64 md:w-64 sm:w-56 lg:w-52 w-44 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
+                        className="block px-3 py-2 2xl:w-80 xl:w-64 md:w-64 sm:w-56 lg:w-52 w-48 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
                       ></input>
                     </div>
                   </div>
@@ -303,7 +313,7 @@ const RegistrationPage = () => {
                     >
                       T Shirt size <span className="text-red-500">*</span>
                     </label>
-                    <select className="block px-5 py-2 2xl:w-80 xl:w-64 lg:w-52 md:w-64 sm:w-56 w-44 pr-6 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm">
+                    <select className="block px-5 py-2 2xl:w-80 xl:w-64 lg:w-52 md:w-64 sm:w-56 w-48 pr-6 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm">
                       <option
                         className="text-blue-900 text-lg font-semibold"
                         value=""
@@ -348,14 +358,14 @@ const RegistrationPage = () => {
                         type="text"
                         id="medicalIssues"
                         name="medicalIssues"
-                        className="block px-3 py-2 2xl:w-80 xl:w-64 lg:w-52 md:w-64 sm:w-56 w-44    border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
+                        className="block px-3 py-2 2xl:w-80 xl:w-64 lg:w-52 md:w-64 sm:w-56 w-48    border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
                       ></input>
                     </div>
                   </div>
                   <div className="flex items-center mt-2 space-x-4">
                     <label
                       htmlFor="address"
-                      className="2xl:w-52 xl:w-44 lg:w-28 md:w-52 sm:w-32 w-20   text-sm lg:text-base justify-start text-start"
+                      className="2xl:w-52 xl:w-44 lg:w-28 md:w-52 sm:w-32 w-20 text-sm lg:text-base justify-start text-start"
                     >
                       Address <span className="text-red-500">*</span>
                     </label>
@@ -364,7 +374,7 @@ const RegistrationPage = () => {
                         type="text"
                         id="medicalIssues"
                         name="medicalIssues"
-                        className="block px-3 py-2 2xl:w-80 xl:w-64 lg:w-52 md:w-64 sm:w-56 w-44    border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
+                        className="block px-3 py-2 2xl:w-80 xl:w-64 lg:w-52 md:w-64 sm:w-56 w-48    border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
                       ></textarea>
                     </div>
                   </div>
@@ -376,7 +386,7 @@ const RegistrationPage = () => {
                       State <span className="text-red-500">*</span>
                     </label>
                     <select
-                      className="block px-5 py-2 2xl:w-80 xl:w-64 lg:w-52 md:w-64 sm:w-56 w-44 pr-6 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
+                      className="block px-5 py-2 2xl:w-80 xl:w-64 lg:w-52 md:w-64 sm:w-56 w-48 pr-6 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
                       id="state"
                       name="state"
                     >
@@ -403,12 +413,13 @@ const RegistrationPage = () => {
                       Pincode <span className="text-red-500">*</span>
                     </label>
                     <div className="bg-gray-100 inline-flex rounded-lg items-center hover:bg-gray-200 focus:outline-none">
-                      <textarea
+                      <input
                         type="text"
                         id="pincode"
                         name="pincode"
-                        className="block px-3 py-2 2xl:w-80 xl:w-64 lg:w-52 sm:w-56 md:w-64 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
-                      ></textarea>
+                        className="block px-3 py-2 2xl:w-80 xl:w-64 lg:w-52 sm:w-56 md:w-48 w-48 border border-gray-300 h-12 bg-white rounded-md shadow-sm focus:outline-none focus:ring-grey-500 sm:text-sm"
+                        disabled
+                      />
                     </div>
                     {errors.pincode && (
                       <p className="text-red-500 text-xs">{errors.pincode}</p>
@@ -533,7 +544,7 @@ const RegistrationPage = () => {
                   <div className="flex items-center mt-2 space-x-4">
                     <label
                       htmlFor="runnerClub"
-                      className="2xl:w-52 xl:w-44 lg:w-28 md:w-52 sm:w-32 w-20   text-sm lg:text-base justify-start text-start"
+                      className="2xl:w-52 xl:w-44 lg:w-28 md:w-52 sm:w-32 w-20 text-sm lg:text-base justify-start text-start"
                     >
                       Runner Club
                     </label>
@@ -585,6 +596,7 @@ const RegistrationPage = () => {
           </div>
         </section>
       </form>
+      <Footer />
     </div>
   );
 };

@@ -4,12 +4,18 @@ import BackgroundImage from "../assets/bg_badge.png";
 import LogoImage from "../assets/nova_logo.png";
 import CircleImage from "../assets/Removal-162.png";
 import "./SingleResult.css";
+import Footer from "./Footer";
+import MainMenu from "./MainMenu";
+import MobileMenu from "./MobileMenu";
+import MainMenu2 from "./MainMenu2";
 
 const SingleResult = () => {
   return (
     <div className="bg-[#fffafa] w-full min-h-screen overflow-hidden">
+      <MainMenu2 />
+      <MobileMenu />
       {/* banner and name div start */}
-      <section className="text-gray-600 body-font 2xl:mr-32">
+      <section className="text-gray-600 lg:mt-20 body-font 2xl:mr-32">
         <div className="container mx-auto flex px-5 2xl:ml-32 xl:ml-24 lg:ml-10 md:ml-9 sm:ml-3 ml-2 pt-10 sm:pt-10 md:pt-10 lg:pt-10 xl:pt-14 2xl:pt-10 md:flex-row flex-col items-center">
           <div
             className="lg:max-w-lg md:w-64 lg:w-96 xl:w-full w-11/12 mb-10 md:mb-0 z-20"
@@ -77,7 +83,6 @@ const SingleResult = () => {
         </div>
       </section>
       {/* note div end */}
-
       {/* ---------------------- */}
       <div className="flex flex-wrap h-screen mb-[50rem] sm:mb-[60rem] md:mb-[30rem] lg:mb-[15rem] xl:mb-[6rem] 2xl:mb-[6rem]">
         <div className=" h-[45rem] 2xl:ml-24 xl:ml-36 lg:ml-28 md:ml-28 sm:ml-24 ml-9">
@@ -130,7 +135,10 @@ const SingleResult = () => {
                   >
                     SALEM MARATHON 2024
                   </p>
-                  <p className="2xl:text-2xl xl:text-2xl lg:text-lg text-2xl pt-2 font-mornal uppercase text-neutral-200 title-font mb-2" style={{fontFamily:"Josefin Sans, sans-serif"}}>
+                  <p
+                    className="2xl:text-2xl xl:text-2xl lg:text-lg text-2xl pt-2 font-mornal uppercase text-neutral-200 title-font mb-2"
+                    style={{ fontFamily: "Josefin Sans, sans-serif" }}
+                  >
                     5km, 10km, 21km
                   </p>
                   <p className="2xl:text-xl xl:text-xl lg:text-lg text-xl font-semibold uppercase text-neutral-200 title-font mb-2">
@@ -824,7 +832,7 @@ const SingleResult = () => {
           </div>
         </div>
       </div>
-      {/* ---------------------- */}
+      <Footer />
     </div>
   );
 };

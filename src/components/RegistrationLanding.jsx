@@ -12,12 +12,18 @@ import Bag from "../assets/souvenir-2680070b.png";
 import Certificate from "../assets/certificate-148f59eb.png";
 import Hidration from "../assets/hydrated-skin-bbe49588.png";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
+import MainMenu from "./MainMenu";
+import MobileMenu from "./MobileMenu";
+import MainMenu2 from "./MainMenu2";
 
 const RegistrationLanding = () => {
   return (
     <div>
+      <MainMenu />
+      <MobileMenu />
       <section className="text-gray-600 body-font">
-        <div className="container py-12 pt-32 flex flex-wrap items-start">
+        <div className="container py-12 lg:pt-32 flex flex-wrap items-start">
           <div className="2xl:w-[59rem] xl:w-[48rem] lg:w-[35rem] ml-7 md:ml-20 lg:pr-0 pr-0">
             <div>
               <p
@@ -530,6 +536,7 @@ const RegistrationLanding = () => {
           </section>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
