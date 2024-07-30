@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import BannerImage from "../assets/pexels-runffwpu-2168292.jpg";
 import { Link, useNavigate } from "react-router-dom";
+import MobileMenu from "./MobileMenu";
+import MainMenu2 from "./MainMenu2";
 
 const RaceResults = () => {
-
   const results = [
     {
       bib: 1177,
@@ -93,8 +94,10 @@ const RaceResults = () => {
 
   return (
     <>
+      <MainMenu2 />
+      <MobileMenu />
       {/* banner and sea  rch input start*/}
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 lg:mt-12 body-font">
         <div className="container py-0 w-full flex flex-wrap relative z-0">
           <div className="mx-auto relative w-full">
             <div className="flex flex-wrap sm:w-screen lg:w-screen py-32 px-10 relative mb-4">
@@ -498,7 +501,6 @@ const RaceResults = () => {
         </div>
       </section>
       {/* table Container end */}
-      {/* table Container mobile responsive start */}
       <div class="relative overflow-x-auto block sm:hidden">
         <table class="w-full text-sm text-left mt-10 border rtl:text-right text-gray-500 border-gray-300">
           <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
@@ -583,7 +585,6 @@ const RaceResults = () => {
           </tbody>
         </table>
       </div>
-      {/* table Container mobile responsive end */}
     </>
   );
 };
